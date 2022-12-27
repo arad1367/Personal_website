@@ -4,14 +4,14 @@ from email.message import EmailMessage
 import os
 from pymongo import MongoClient
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 cluster_address = os.environ['CLUSTER']
 cluster = MongoClient(cluster_address)
 db = cluster['personalSiteDB']
 collection = db['customers']
 
-@app.route('/', methods=['GET','POST'])
+@application.route('/', methods=['GET','POST'])
 def home_page():
     if request.method == 'POST':
         name = request.form['name']
@@ -42,4 +42,4 @@ def home_page():
     return render_template('index.html', msg_sent=False)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
