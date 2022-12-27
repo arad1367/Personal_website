@@ -5,6 +5,7 @@ import os
 from pymongo import MongoClient
 
 application = Flask(__name__)
+app = application
 
 cluster_address = os.environ['CLUSTER']
 cluster = MongoClient(cluster_address)
