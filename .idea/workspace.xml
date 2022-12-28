@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e5680343-d5b6-4857-a82b-d17d419b4425" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/req.txt" beforeDir="false" afterPath="$PROJECT_DIR$/req.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,10 +58,10 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="OWNEREMAIL" value="pejdaniel1000@gmail.com" />
-        <env name="OWNERPASS" value="uiqxiixvfjvuticr" />
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DATABASE_URL" value="sqlite:///personalWeb.db" />
+        <env name="OWNEREMAIL" value="pejdaniel1000@gmail.com" />
+        <env name="OWNERPASS" value="uiqxiixvfjvuticr" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
