@@ -20,7 +20,7 @@ class Web(db.Model):
     message = db.Column(db.String(500), unique=False, nullable=False)
 
 # Make database
-db.create_all()
+# db.create_all()
 
 # cluster_address = os.environ['CLUSTER']
 # cluster = MongoClient(cluster_address)
@@ -30,11 +30,10 @@ db.create_all()
 @app.route('/', methods=['GET','POST'])
 def home_page():
     if request.method == 'POST':
-        new_user = Web(
-            name=request.form['name'],
-            email = request.form['email'],
-            message = request.form['message']
-                          )
+        new_user = Web()
+        new_user.name=request.form['name'],
+        new_user.email = request.form['email'],
+        new_user.message = request.form['message']
 
         db.session.add(new_user)
         db.session.commit()
@@ -43,7 +42,7 @@ def home_page():
         msg.set_content(new_user.message)
         owner_email = os.environ['OWNEREMAIL']
         owner_pass = os.environ['OWNERPASS']
-        msg['Subject'] = 'New message from Personal website'
+        msg['Subject'] = f'New message from {new_user.name}'
         msg['From'] = f'{new_user.email}'
         msg['To'] = owner_email
         # Send the message via our own SMTP server.
